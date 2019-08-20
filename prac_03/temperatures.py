@@ -1,7 +1,11 @@
 def main():
-    menu = input("C - Convert Celsius to Fahrenheit\nF - Convert Fahrenheit to Celsius\nQ - Quit")
-    print(menu)
+    MENU = input("C - Convert Celsius to Fahrenheit\nF - Convert Fahrenheit to Celsius\nQ - Quit")
+    print(MENU)
     choice = input(">>> ").upper()
+    menu_choice(MENU, choice)
+
+
+def menu_choice(MENU, choice):
     while choice != "Q":
         if choice == "C":
             celsius = float(input("Celsius: "))
@@ -13,7 +17,7 @@ def main():
             print("Result: {:.2f} C".format(celsius))
         else:
             print("Invalid option")
-        print(menu)
+        print(MENU)
         choice = input(">>> ").upper()
     print("Thank you.")
 
